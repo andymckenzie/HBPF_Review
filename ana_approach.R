@@ -11,8 +11,3 @@ approach = approach[!approach$Approach == "Unclear", ]
 approach$Number_brains = as.numeric(approach$`Number of perfusion-fixed brains`)
 
 approach_plot = ggplot(approach, aes(x=Year, y= Number_brains, size = sqrt(Number_brains), color = Approach)) + geom_point(alpha = 0.66) + scale_size_continuous(name = "Number of brains", range=c(2.5,25), breaks = sqrt(c(1, 5, 10, 50, 125)), labels =  c(1, 5, 10, 50, 125), limits = c(1, 125))  + scale_colour_manual(values = cbPalette) + ylab("Number of perfusion fixed brains") + theme_bw()  + xlab("Year published") + scale_x_continuous(breaks  = scales::pretty_breaks(n = 6))
- #, size=(sqrt(Number_brains))
-# scale_x_discrete(name="Gram Stain of Organism", labels = c("Negative", "Variable", "Positive"), limits = c(0, 1.5, 3))+
-# scale_y_continuous(name = "Log Resistance (MIC) to Cefotaxime") + geom_point(colour="red")+
-# theme(axis.text = element_text(size= 12, colour = "black"), axis.title = element_text(size = rel(1), colour = "blue"), legend.background = element_rect(colour="black", fill = "white"), legend.key = element_rect(fill = "white"), panel.background = element_rect(colour = "black", fill = "white"), panel.grid.major.x= element_blank())
-# expand_limits(x = c(-0.75, 3.5)) + geom_text (size = 4, vjust=-0.3)+
