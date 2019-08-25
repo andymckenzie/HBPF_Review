@@ -1,3 +1,3 @@
-# Data and code for a figure in a human brain perfusion fixation review.
+# Human brain perfusion fixation studies
 
-Made using R version 3.5.1 (2018-07-02). 
+Data and code for a figure in a review paper. Made using R version 3.5.1 (2018-07-02). 
